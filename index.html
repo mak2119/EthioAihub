@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>ETHIO AI HUB - Ethiopian AI Web Platform</title>
+  <meta name="description" content="ETHIO AI HUB: Ethiopian Multi-Purpose AI Web Platform for students, job seekers, entrepreneurs, drivers, and daily life." />
+  <meta property="og:title" content="ETHIO AI HUB - Ethiopian AI Web Platform" />
+  <meta property="og:description" content="Empower your education, work, business, and daily tasks with AI tailored for Ethiopia." />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Google Fonts: Inter & Noto Sans Ethiopic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+Ethiopic:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheets in Strict Order -->
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/dashboard.css" />
+  <link rel="stylesheet" href="/css/tools.css" />
+  <link rel="stylesheet" href="/css/admin-shared.css" />
+  <link rel="stylesheet" href="/css/responsive.css" />
+</head>
+<body>
+
+  <!-- Fullscreen App Container -->
+  <div id="app" class="app-layout">
+    
+    <!-- Mobile Sidebar Backdrop Overlay -->
+    <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
+    <!-- Desktop Sidebar -->
+    <aside id="app-sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-logo">🇪🇹</div>
+        <div class="brand-text">
+          <div class="brand-title">ETHIO AI HUB</div>
+          <div class="brand-sub">አርቲፊሻል ኢንተለጀንስ</div>
+        </div>
+      </div>
+      <div class="ethio-ribbon"></div>
+
+      <!-- Navigation Menu (17 items) -->
+      <nav class="sidebar-nav">
+        <div class="nav-section-title">ዋና ዋና ገጾች (Main)</div>
+        <a href="#/dashboard" class="nav-item active">
+          <span class="nav-icon">📊</span>
+          <span data-i18n="navDashboard">ዳሽቦርድ</span>
+        </a>
+
+        <div class="nav-section-title">የ AI መሳሪያዎች (12 Tools)</div>
+        <a href="#/tools/ai-assistant" class="nav-item">
+          <span class="nav-icon">💬</span>
+          <span data-i18n="navAiAssistant">አርቲፊሻል ኢንተለጀንስ ረዳት</span>
+        </a>
+        <a href="#/tools/job-finder" class="nav-item">
+          <span class="nav-icon">💼</span>
+          <span data-i18n="navJobFinder">የስራ ፈላጊ ረዳት</span>
+        </a>
+        <a href="#/tools/education-helper" class="nav-item">
+          <span class="nav-icon">🎓</span>
+          <span data-i18n="navEducationHelper">የትምህርት ረዳት</span>
+        </a>
+        <a href="#/tools/document-writer" class="nav-item">
+          <span class="nav-icon">📝</span>
+          <span data-i18n="navDocumentWriter">ሰነድ አዘጋጅ</span>
+        </a>
+        <a href="#/tools/translator" class="nav-item">
+          <span class="nav-icon">🌐</span>
+          <span data-i18n="navTranslator">ተርጓሚ</span>
+        </a>
+        <a href="#/tools/business-helper" class="nav-item">
+          <span class="nav-icon">📈</span>
+          <span data-i18n="navBusinessHelper">የቢዝነስ ረዳት</span>
+        </a>
+        <a href="#/tools/home-finder" class="nav-item">
+          <span class="nav-icon">🏠</span>
+          <span data-i18n="navHomeFinder">የቤትና ንብረት ፈላጊ</span>
+        </a>
+        <a href="#/tools/money-planner" class="nav-item">
+          <span class="nav-icon">💰</span>
+          <span data-i18n="navMoneyPlanner">የገንዘብና ዕቁብ እቅድ</span>
+        </a>
+        <a href="#/tools/health-assistant" class="nav-item">
+          <span class="nav-icon">🩺</span>
+          <span data-i18n="navHealthAssistant">የጤና ረዳት</span>
+        </a>
+        <a href="#/tools/ethio-drive" class="nav-item">
+          <span class="nav-icon">🚗</span>
+          <span data-i18n="navEthioDrive">የመንጃ ፈቃድና ትራንስፖርት</span>
+        </a>
+        <a href="#/academy" class="nav-item">
+          <span class="nav-icon">🏫</span>
+          <span data-i18n="navEthioAcademy">ኢትዮ አካዳሚ</span>
+          <span class="nav-badge">Pro</span>
+        </a>
+        <a href="#/tools/ethio-verify" class="nav-item">
+          <span class="nav-icon">🛡️</span>
+          <span data-i18n="navEthioVerify">ኢትዮ ቬሪፋይ</span>
+        </a>
+
+        <div class="nav-section-title">መለያ እና ክፍያዎች (Account)</div>
+        <a href="#/profile" class="nav-item">
+          <span class="nav-icon">👤</span>
+          <span data-i18n="navAccount">የግል መለያዬ</span>
+        </a>
+        <a href="#/subscription" class="nav-item">
+          <span class="nav-icon">⭐</span>
+          <span data-i18n="navSubscription">የደንበኝነት ምዝገባ</span>
+        </a>
+        <a href="#/privacy" class="nav-item">
+          <span class="nav-icon">🔒</span>
+          <span data-i18n="navPrivacy">የግላዊነት ፖሊሲና ደንቦች</span>
+        </a>
+        <button id="sidebar-logout-btn" class="nav-item" style="background: none; border: none; text-align: left; width: 100%; color: #f87171;">
+          <span class="nav-icon">🚪</span>
+          <span data-i18n="navLogout">ውጣ</span>
+        </button>
+      </nav>
+
+      <!-- Sidebar User Preview -->
+      <div class="sidebar-footer">
+        <div class="user-snippet">
+          <div id="user-avatar-initials" class="user-avatar">E</div>
+          <div class="user-details">
+            <div id="user-display-name" class="user-name">እንግዳ (Guest)</div>
+            <span id="user-plan-badge" class="badge badge-free">FREE</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <div class="main-wrapper">
+      
+      <!-- Top Application Header -->
+      <header class="top-header">
+        <div class="header-left">
+          <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Open Navigation Menu">
+            ☰
+          </button>
+          <div class="page-title">
+            <span>ETHIO AI HUB</span>
+          </div>
+        </div>
+
+        <div class="header-actions">
+          <!-- Language Selector -->
+          <div class="lang-selector">
+            <span>🌍</span>
+            <select id="lang-select" aria-label="Choose Language">
+              <option value="am">አማርኛ (Amharic)</option>
+              <option value="en">English</option>
+              <option value="om">Afaan Oromoo</option>
+            </select>
+          </div>
+
+          <!-- Theme Toggle -->
+          <button id="theme-toggle-btn" class="icon-button" onclick="window.EthioProfile.toggleTheme()" title="Toggle Dark/Light Mode" aria-label="Toggle Theme">
+            🌓
+          </button>
+
+          <!-- Upgrade Button -->
+          <button id="header-upgrade-btn" class="btn btn-gold btn-sm">
+            <span>⭐</span> <span class="btn-text" data-i18n="upgradePlan">እቅድ አሻሽሉ</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Dynamic Route Content Body -->
+      <main class="content-body">
+        <div id="main-content-view">
+          <!-- Views rendered by EthioRouter -->
+        </div>
+      </main>
+
+      <!-- Mobile Bottom Navigation Bar -->
+      <nav class="mobile-bottom-nav">
+        <button class="mobile-nav-btn active" data-href="#/dashboard" onclick="window.location.hash='#/dashboard'">
+          <span>📊</span>
+          <span data-i18n="navDashboard">ዳሽቦርድ</span>
+        </button>
+        <button class="mobile-nav-btn" data-href="#/tools/ai-assistant" onclick="window.location.hash='#/tools/ai-assistant'">
+          <span>💬</span>
+          <span>AI ረዳት</span>
+        </button>
+        <button class="mobile-nav-btn" data-href="#/academy" onclick="window.location.hash='#/academy'">
+          <span>🏫</span>
+          <span>አካዳሚ</span>
+        </button>
+        <button class="mobile-nav-btn" data-href="#/tools/money-planner" onclick="window.location.hash='#/tools/money-planner'">
+          <span>💰</span>
+          <span>ገንዘብ</span>
+        </button>
+        <button class="mobile-nav-btn" data-href="#/profile" onclick="window.location.hash='#/profile'">
+          <span>👤</span>
+          <span data-i18n="navAccount">መለያ</span>
+        </button>
+      </nav>
+
+    </div>
+
+  </div>
+
+  <!-- TeleBirr Payment Modal -->
+  <div id="payment-modal" class="modal-overlay">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span style="font-size: 1.3rem;">📱</span>
+          <h3 style="font-size: 1.15rem; margin: 0;" data-i18n="telebirrPayment">የቴሌብር (TeleBirr) ክፍያ</h3>
+        </div>
+        <button class="modal-close" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <div style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;" data-i18n="paymentInstructions">
+        ክፍያውን ወደተገለጸው የቴሌብር ቁጥር ከላኩ በኋላ የደረሰኝ ቁጥር እና ስክሪንሾት ያስገቡ።
+      </div>
+
+      <div style="background: var(--bg-main); border: 1px solid var(--border); border-radius: var(--radius-md); padding: 14px; margin-bottom: 16px;">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+          <span data-i18n="receiverPhone">የሚላክበት ቴሌብር ቁጥር:</span>
+          <strong id="pay-phone-display" style="color: var(--primary); font-size: 1rem;">0911234567</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+          <span data-i18n="receiverName">የመለያ ስም:</span>
+          <strong id="pay-name-display">ETHIO AI HUB / TADE APPS</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; border-top: 1px dashed var(--border); padding-top: 8px;">
+          <span>የሚከፈለው መጠን:</span>
+          <strong id="pay-amount-display" style="color: var(--gold); font-size: 1.05rem;">250 ETB</strong>
+        </div>
+      </div>
+
+      <form id="telebirr-pay-form">
+        <div class="form-group">
+          <label class="form-label">የደንበኝነት እቅድ (Plan)</label>
+          <select id="pay-plan-select" required>
+            <option value="premium">ፕሪሚየም (Premium - 250 ETB/ወር)</option>
+            <option value="business">ቢዝነስ (Business - 600 ETB/ወር)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">የክፍያ ቆይታ (Billing Period)</label>
+          <select id="pay-period-select" required>
+            <option value="monthly">ወርሃዊ ክፍያ (Monthly)</option>
+            <option value="annual">አመታዊ ክፍያ (Annual - 10% Discount)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="transactionId">የቴሌብር ደረሰኝ ቁጥር (Transaction ID)</label>
+          <input type="text" id="pay-txid-input" required placeholder="ምሳሌ፡ TB1234567890">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="paymentDate">የተከፈለበት ቀን</label>
+          <input type="date" id="pay-date-input">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="uploadScreenshot">የክፍያ ስክሪንሾት (Receipt Screenshot)</label>
+          <input type="file" id="pay-screenshot-input" accept="image/*">
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px;">
+          <button type="button" class="btn btn-secondary modal-cancel-btn" data-i18n="cancel">ሰርዝ</button>
+          <button type="submit" class="btn btn-primary" data-i18n="submit">ክፍያውን አረጋግጥ (Submit)</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Post Property Modal -->
+  <div id="post-property-modal" class="modal-overlay">
+    <div class="modal-dialog">
+      <div class="modal-header">
+        <h3 style="font-size: 1.15rem; margin: 0;">አዲስ የቤት ማስታወቂያ ያስገቡ (Post Property)</h3>
+        <button class="modal-close" aria-label="Close dialog">&times;</button>
+      </div>
+
+      <form id="post-property-form">
+        <div class="form-group">
+          <label class="form-label">የማስታወቂያው ርዕስ</label>
+          <input type="text" id="post-prop-title" required placeholder="ምሳሌ፡ ባለ 2 መኝታ ቤት ለኪራይ">
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <div class="form-group">
+            <label class="form-label">አይነት</label>
+            <select id="post-prop-type">
+              <option value="rent">የሚከራይ (Rent)</option>
+              <option value="sale">የሚሸጥ (Sale)</option>
+              <option value="commercial">ለንግድ (Commercial)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">ክፍለ ከተማ</label>
+            <select id="post-prop-subcity">
+              <option value="Bole">ቦሌ (Bole)</option>
+              <option value="Yeka">የካ (Yeka)</option>
+              <option value="Kirkos">ቂርቆስ (Kirkos)</option>
+              <option value="Nifas Silk">ንፋስ ስልክ</option>
+              <option value="Kolfe">ኮልፌ</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+          <div class="form-group">
+            <label class="form-label">ዋጋ በብር (ETB)</label>
+            <input type="number" id="post-prop-price" required placeholder="25000">
+          </div>
+          <div class="form-group">
+            <label class="form-label">የእውቂያ ስልክ</label>
+            <input type="tel" id="post-prop-phone" required placeholder="09...">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">ዝርዝር መግለጫ</label>
+          <textarea id="post-prop-desc" rows="3" required placeholder="ስለ ቤቱ ሁኔታ፣ ውሃ፣ መብራት ወዘተ ይግለጹ..."></textarea>
+        </div>
+
+        <div style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 14px;">
+          ማሳሰቢያ፡ ማስታወቂያው በአስተዳዳሪው ታይቶ ከጸደቀ በኋላ ለህዝብ ይታያል።
+        </div>
+
+        <div style="display: flex; justify-content: flex-end; gap: 10px;">
+          <button type="button" class="btn btn-secondary modal-cancel-btn">ሰርዝ</button>
+          <button type="submit" class="btn btn-primary">ማስታወቂያውን አስገባ</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container"></div>
+
+  <!-- Firebase JS SDK v10 Compat Scripts -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+  <!-- Modular Application Scripts in Strict Loading Order -->
+  <script src="/js/translations.js"></script>
+  <script src="/js/language.js"></script>
+  <script src="/js/firebase-config.js"></script>
+  <script src="/js/firebase.js"></script>
+  <script src="/js/auth.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/subscription.js"></script>
+  <script src="/js/notifications.js"></script>
+  <script src="/js/favorites.js"></script>
+  <script src="/js/privacy.js"></script>
+  <script src="/js/profile.js"></script>
+  <script src="/js/dashboard.js"></script>
+
+  <!-- Tool Modules -->
+  <script src="/js/tools/ai-assistant.js"></script>
+  <script src="/js/tools/job-finder.js"></script>
+  <script src="/js/tools/education-helper.js"></script>
+  <script src="/js/tools/document-writer.js"></script>
+  <script src="/js/tools/translator.js"></script>
+  <script src="/js/tools/business-helper.js"></script>
+  <script src="/js/tools/home-finder.js"></script>
+  <script src="/js/tools/money-planner.js"></script>
+  <script src="/js/tools/health-assistant.js"></script>
+  <script src="/js/tools/ethio-drive.js"></script>
+  <script src="/js/tools/ethio-academy.js"></script>
+  <script src="/js/tools/ethio-verify.js"></script>
+
+  <!-- Router and Orchestrator -->
+  <script src="/js/router.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

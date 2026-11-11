@@ -1,0 +1,479 @@
+/* ETHIO AI HUB - AI Tools Styles */
+
+/* Common Tool Header */
+.tool-header-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  margin-bottom: 20px;
+}
+
+.tool-header-left {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.tool-header-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+.tool-tabs {
+  display: flex;
+  gap: 8px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 20px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.tab-btn {
+  padding: 8px 16px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.88rem;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  color: var(--text-main);
+}
+
+.tab-btn.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+}
+
+/* Chat Layout (AI Assistant, Health AI, Drive AI, Ask Teacher) */
+.chat-workspace {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 200px);
+  min-height: 480px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.message-row {
+  display: flex;
+  gap: 12px;
+  max-width: 85%;
+}
+
+.message-row.user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.message-row.ai {
+  align-self: flex-start;
+}
+
+.msg-avatar {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+
+.msg-avatar.user-avatar {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.msg-avatar.ai-avatar {
+  background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  color: #ffffff;
+}
+
+.msg-bubble {
+  padding: 12px 16px;
+  border-radius: var(--radius-lg);
+  font-size: 0.9rem;
+  line-height: 1.55;
+  position: relative;
+  word-break: break-word;
+}
+
+.message-row.user .msg-bubble {
+  background-color: var(--primary);
+  color: #ffffff;
+  border-bottom-right-radius: 4px;
+}
+
+.message-row.ai .msg-bubble {
+  background-color: var(--bg-main);
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  border-bottom-left-radius: 4px;
+}
+
+.msg-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  font-size: 0.75rem;
+}
+
+.msg-action-btn {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.msg-action-btn:hover {
+  background-color: var(--border);
+  color: var(--text-main);
+}
+
+/* Prompt Chips */
+.prompt-chips {
+  display: flex;
+  gap: 8px;
+  padding: 8px 16px;
+  overflow-x: auto;
+  border-top: 1px solid var(--border);
+  background-color: var(--bg-card);
+}
+
+.chip {
+  padding: 6px 12px;
+  background-color: var(--bg-main);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.15s ease;
+}
+
+.chip:hover {
+  background-color: var(--primary-light);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Chat Input Bar */
+.chat-input-area {
+  padding: 12px 16px;
+  border-top: 1px solid var(--border);
+  background-color: var(--bg-card);
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.chat-input-area textarea {
+  flex: 1;
+  resize: none;
+  min-height: 42px;
+  max-height: 120px;
+  border-radius: var(--radius-md);
+  padding: 10px 14px;
+}
+
+/* Translator Layout */
+.translator-workspace {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+}
+
+.trans-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.trans-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.trans-textarea {
+  height: 220px;
+  resize: none;
+  padding: 14px;
+  font-size: 0.95rem;
+}
+
+.trans-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Document Writer */
+.doc-workspace {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 20px;
+}
+
+.doc-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.doc-editor-card {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 220px);
+  min-height: 520px;
+}
+
+.doc-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--bg-main);
+}
+
+.doc-content-area {
+  flex: 1;
+  padding: 20px;
+  border: none;
+  resize: none;
+  font-family: inherit;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.doc-content-area:focus {
+  box-shadow: none;
+}
+
+/* Real Estate Listing Cards */
+.listings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 20px;
+}
+
+.listing-card {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background-color: var(--bg-card);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.listing-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+.listing-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  background-color: var(--border);
+}
+
+.listing-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.listing-price {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+.listing-title {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.listing-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Rental Checklist & Warnings */
+.safety-warning-banner {
+  background-color: var(--ruby-light);
+  border: 1px solid #f87171;
+  color: #991b1b;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.legal-notice {
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--text-muted);
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* Equb Card */
+.equb-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.equb-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Emergency Alert */
+.emergency-banner {
+  background-color: #fee2e2;
+  border: 2px solid #ef4444;
+  color: #991b1b;
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.emergency-numbers {
+  display: flex;
+  gap: 8px;
+}
+
+.emergency-pill {
+  background-color: #b91c1c;
+  color: white;
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+/* Academy Courses */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.course-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--bg-card);
+  display: flex;
+  flex-direction: column;
+}
+
+.course-banner {
+  height: 140px;
+  background: linear-gradient(135deg, #065f46 0%, #047857 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.course-info {
+  padding: 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Certificate Preview */
+.certificate-box {
+  border: 8px double #d97706;
+  padding: 32px;
+  text-align: center;
+  background: #fffbeb;
+  color: #1f2937;
+  border-radius: var(--radius-md);
+  margin-top: 20px;
+}
+
+.cert-title {
+  font-family: Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #92400e;
+  margin-bottom: 8px;
+}
+
+.cert-disclaimer {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 16px;
+}
+
+/* Verification Pending State */
+.verify-status-box {
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  background: var(--gold-light);
+  border: 1px solid #f59e0b;
+  color: #92400e;
+  text-align: center;
+  margin-top: 16px;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "ETHIO AI HUB",
+  "description": "Ethiopian Multi-Purpose AI Web Platform for students, job seekers, entrepreneurs, drivers, and daily life.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
